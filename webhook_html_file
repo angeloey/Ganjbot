@@ -7,6 +7,7 @@
   </head>
   <body>
     <button onclick="sendMessage()">Send</button>
+        <button onclick="sendMessage2()">Send2</button>
   </body>
 
   <script>
@@ -20,6 +21,22 @@
         username: "Ganjbot",
         avatar_url: "",
         content: "test 1 fuckers"
+      }
+
+      request.send(JSON.stringify(params));
+    }
+  </script>
+    <script>
+    function sendMessage2() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discordapp.com/api/webhooks/757879351084843030/C3PuHIgk3mHj3k9cyt2aFJZUeNVqNauZdRgi9OK1r8uolm6VR1Ju_wBOSqICHCiD4SWl");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "Ganjbot",
+        avatar_url: "",
+        content: "test button 2 fuckers"
       }
 
       request.send(JSON.stringify(params));

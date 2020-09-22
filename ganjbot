@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Send a message via ganjbot</h1>
+
+<form action="sendMessage()">
+  <label for="message">Message:</label>
+  <input type="text" id="message" name="message"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<p>lol i have no idea if this is going to work.</p>
+
+</body>
+
+
+ <script>
+    function sendMessage() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discordapp.com/api/webhooks/757879351084843030/C3PuHIgk3mHj3k9cyt2aFJZUeNVqNauZdRgi9OK1r8uolm6VR1Ju_wBOSqICHCiD4SWl");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "Ganjbot",
+        avatar_url: "",
+        content: "message()"
+      }
+
+      request.send(JSON.stringify(params));
+    }
+  </script>
+
+
+</html>

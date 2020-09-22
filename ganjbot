@@ -15,6 +15,7 @@
 
  <script>
     function sendMessage() {
+     var message = document.getElementById('message').value;
       var request = new XMLHttpRequest();
       request.open("POST", "https://discordapp.com/api/webhooks/757879351084843030/C3PuHIgk3mHj3k9cyt2aFJZUeNVqNauZdRgi9OK1r8uolm6VR1Ju_wBOSqICHCiD4SWl");
 
@@ -23,7 +24,7 @@
       var params = {
         username: "Ganjbot",
         avatar_url: "",
-        content: "message()"
+        content: "" + message
       }
 
       request.send(JSON.stringify(params));

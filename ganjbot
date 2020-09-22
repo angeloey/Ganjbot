@@ -7,7 +7,7 @@
 <form action="sendMessage()">
   <label for="message">Message:</label>
   <input type="text" id="message" name="message"><br><br>
-  <input type="submit" value="Submit">
+  <button onclick="sendMessage()">Send</button>
 </form>
 
 <p>lol i have no idea if this is going to work.</p>
